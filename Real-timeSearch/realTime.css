@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+.flex.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.gap-10 {
+    gap: 40px;
+}
+
+
+input {
+    margin-top: 40px;
+    width: 300px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: #111;
+    color: #888;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #666;
+}
+
+
+.flex.gap-10 {
+    display: flex;
+    gap: 40px;
+}
+
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #111;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.blurred-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        black 30%
+    );
+
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        black 30%
+    );
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 25px;
+
+    color: white;
+}
+
+.content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
